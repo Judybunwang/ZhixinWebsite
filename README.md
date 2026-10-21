@@ -1,13 +1,22 @@
 # Zhixin Wang, PhD
 
-Personal professional website, hosted on GitHub Pages.
+Personal website, hosted on GitHub Pages. Plain HTML and CSS, no build step.
 
-## Structure
+## Pages
 
-- `index.html` holds all page content (About, Experience, Education, Skills, Contact).
-- `styles.css` holds the styling, with automatic light and dark themes.
-- `.nojekyll` tells GitHub Pages to serve the files as-is.
+- `index.html`: Home (intro, highlights, links to every page)
+- `career.html`: Experience, education, skills, languages
+- `research.html`: Research focus, publications, honors, certifications
+- `cooking.html`: Cooking and baking
+- `pets.html`: Pets
+- `styles.css`: Shared styling, with automatic light and dark themes
+
+Each page repeats the same header and footer, so a new page or nav link needs adding to every file.
+
+## Photos
+
+Put images in a `photos/` folder and swap a placeholder such as `<div class="photo">…</div>` for `<div class="photo"><img src="photos/cat.jpg" alt="…"></div>`. The home page portrait works the same way with `<div class="portrait">`.
 
 ## Publishing
 
-In the repository's **Settings → Pages**, set **Source** to "Deploy from a branch", branch `main`, folder `/ (root)`. The site is published at `https://judybunwang.github.io/<repo-name>/`.
+In the repository's **Settings → Pages**, set **Source** to "Deploy from a branch", branch `main`, folder `/ (root)`.
