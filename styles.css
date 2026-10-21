@@ -1,34 +1,34 @@
 :root {
-  --bg: #fff4f6;
-  --surface: #ffffff;
-  --surface-2: #fde7ed;
-  --text: #3a2a30;
-  --muted: #7a636c;
-  --border: #f4d7df;
-  --accent: #c2476f;
+  --bg: #ffffff;
+  --surface: #f3f8fd;
+  --surface-2: #eaf2fb;
+  --text: #1d2939;
+  --muted: #5b6b7f;
+  --border: #dde8f3;
+  --accent: #2864b4;
   --accent-ink: #ffffff;
-  --accent-soft: #fcdfe8;
-  --sage: #5e8a6c;
-  --sage-soft: #e4f0e7;
-  --shadow: 0 1px 2px rgba(120, 40, 70, 0.05), 0 8px 24px rgba(120, 40, 70, 0.07);
-  --radius: 18px;
+  --accent-soft: #e3eefa;
+  --sage: #3c7fa8;
+  --sage-soft: #e6f1f8;
+  --shadow: 0 1px 2px rgba(20, 50, 90, 0.04), 0 6px 18px rgba(20, 50, 90, 0.06);
+  --radius: 16px;
   --max: 1040px;
   --read: 720px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1e1519;
-    --surface: #271c21;
-    --surface-2: #31232a;
-    --text: #f6e8ed;
-    --muted: #c3a9b3;
-    --border: #44313a;
-    --accent: #f293b3;
-    --accent-ink: #1e1519;
-    --accent-soft: #48283a;
-    --sage: #9fcbab;
-    --sage-soft: #23302a;
+    --bg: #0f141b;
+    --surface: #161e29;
+    --surface-2: #1b2532;
+    --text: #e6edf5;
+    --muted: #9eaec0;
+    --border: #273444;
+    --accent: #7fb2f0;
+    --accent-ink: #0f141b;
+    --accent-soft: #1c2c42;
+    --sage: #8cc3e6;
+    --sage-soft: #182a36;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
   }
 }
@@ -97,11 +97,12 @@ h3 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
 .brand:hover .brand-bunny { transform: translateY(-3px) rotate(-6deg); }
 
 .portrait-wrap { position: relative; }
-.peek-bunny { position: absolute; left: -18px; bottom: -14px; width: 96px; height: 96px; transform: rotate(-8deg); filter: drop-shadow(0 4px 8px rgba(120, 40, 70, 0.15)); }
+.peek-bunny { position: absolute; left: -18px; bottom: -14px; width: 96px; height: 96px; transform: rotate(-8deg); filter: drop-shadow(0 4px 8px rgba(20, 50, 90, 0.15)); }
 
 .foot-bunny { width: 22px; height: 22px; vertical-align: -5px; margin-right: 4px; }
 
 .nav-links {
+  margin-left: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -309,13 +310,55 @@ a.card:hover { text-decoration: none; transform: translateY(-2px); border-color:
 .site-footer a { color: var(--muted); display: inline-block; padding: 8px 0; }
 .site-footer ul { display: flex; flex-wrap: wrap; gap: 16px; list-style: none; margin: 0; padding: 0; }
 
+/* Language switcher */
+.lang-switch { position: relative; font-size: 14px; }
+.lang-switch summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary::after { content: " ▾"; font-size: 11px; }
+.lang-switch[open] summary, .lang-switch summary:hover { color: var(--accent); border-color: var(--accent); }
+.lang-switch ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 20;
+  min-width: 150px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.lang-switch li a { display: block; padding: 9px 12px; border-radius: 8px; color: var(--text); }
+.lang-switch li a:hover { background: var(--surface-2); text-decoration: none; }
+.lang-switch li a[aria-current] { color: var(--accent); font-weight: 600; }
+
+/* Chinese pages: use system CJK fonts */
+:lang(zh) body, :lang(zh) h1, :lang(zh) h2, :lang(zh) h3, :lang(zh) .brand {
+  font-family: "Inter", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
 /* Phones: keep the nav on one swipeable row with comfortable tap targets */
 @media (max-width: 600px) {
   .nav { gap: 4px; padding-top: 8px; padding-bottom: 4px; }
+  .nav-links { order: 3; }
   .nav-links {
     flex-wrap: nowrap;
     width: calc(100% + 40px);
     margin: 0 -20px;
+    margin-left: -20px;
     padding: 0 10px 6px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
