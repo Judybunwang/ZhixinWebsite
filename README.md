@@ -10,6 +10,7 @@ Personal website, hosted on GitHub Pages. Plain HTML and CSS, no build step.
 - `cooking.html`: Cooking and baking
 - `pets.html`: Pets
 - `styles.css`: Shared styling, with automatic light and dark themes
+- `bunny.svg`: The bunny mascot used in the header, home page, and footer
 
 Each page repeats the same header and footer, so a new page or nav link needs adding to every file.
 
