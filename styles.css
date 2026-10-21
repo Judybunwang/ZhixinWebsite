@@ -35,7 +35,9 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+img { max-width: 100%; }
 
 body {
   margin: 0;
@@ -54,7 +56,7 @@ h1 { margin: 0 0 12px; font-size: clamp(2.3rem, 6vw, 3.4rem); line-height: 1.1; 
 h2 { margin: 0 0 20px; font-size: 1.7rem; line-height: 1.2; }
 h3 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
 
-.container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left)); }
 .narrow { max-width: var(--read); }
 
 /* Header */
@@ -62,8 +64,11 @@ h3 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
   position: sticky;
   top: 0;
   z-index: 10;
+  background: var(--bg);
   background: color-mix(in srgb, var(--bg) 90%, transparent);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  padding-top: env(safe-area-inset-top);
   border-bottom: 1px solid var(--border);
 }
 
@@ -226,7 +231,7 @@ a.card:hover { text-decoration: none; transform: translateY(-2px); border-color:
   border-radius: var(--radius);
   background: var(--surface);
 }
-.earlier summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+.earlier summary { cursor: pointer; padding: 8px 0; font-weight: 600; color: var(--accent); }
 .earlier ul { margin: 12px 0 0; padding-left: 20px; }
 .earlier li { margin: 6px 0; }
 
@@ -301,8 +306,29 @@ a.card:hover { text-decoration: none; transform: translateY(-2px); border-color:
   justify-content: space-between;
   gap: 12px;
 }
-.site-footer a { color: var(--muted); }
+.site-footer a { color: var(--muted); display: inline-block; padding: 8px 0; }
 .site-footer ul { display: flex; flex-wrap: wrap; gap: 16px; list-style: none; margin: 0; padding: 0; }
+
+/* Phones: keep the nav on one swipeable row with comfortable tap targets */
+@media (max-width: 600px) {
+  .nav { gap: 4px; padding-top: 8px; padding-bottom: 4px; }
+  .nav-links {
+    flex-wrap: nowrap;
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+    padding: 0 10px 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { padding: 10px 9px; font-size: 14.5px; white-space: nowrap; }
+  .button { padding: 13px 22px; }
+}
+
+@media (hover: none) {
+  a.card:hover { transform: none; }
+}
 
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
