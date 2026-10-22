@@ -9,6 +9,7 @@ fr/, es/ and zh/ copies with the text from i18n/translations.py. After
 editing an English page, add any new or changed text to translations.py
 and run the script again. It warns about text it could not translate.
 """
+import hashlib
 import html
 import pathlib
 import re
@@ -19,7 +20,8 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from translations import T  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PAGES = ["index.html", "career.html", "research.html", "cooking.html", "pets.html", "home-diy.html"]
+PAGES = ["index.html", "career.html", "research.html", "cooking.html", "pets.html", "home-diy.html",
+         "pet-tofu.html", "pet-mango.html", "pet-moona.html", "pet-flock.html"]
 LANGS = [("en", "English", "EN"), ("fr", "Français", "FR"), ("es", "Español", "ES"), ("zh", "中文", "中文")]
 COL = {"fr": 0, "es": 1, "zh": 2}
 HTML_LANG = {"en": "en", "fr": "fr", "es": "es", "zh": "zh-Hans"}
@@ -27,7 +29,7 @@ SWITCH_LABEL = {"en": "Language", "fr": "Langue", "es": "Idioma", "zh": "语言"
 
 # Text that is the same in every language and needs no warning.
 KEEP = {"LinkedIn", "©", "·", "3", "4", "PCR", "HACCP", "Farther Farms", "Zhixin Wang ·",
-        "English", "Français", "Español", "中文", "EN",
+        "English", "Français", "Español", "中文", "EN", "Tofu", "Mango", "Moona",
         # Paper titles stay in their published (English) form.
         "Cellulose-Binding Module-Mediated Immobilization of L-Arabinose Isomerase for Reusable D-Tagatose Production",
         "Consumers Respond Positively to the Sensory, Health, and Sustainability Benefits of the Rare Sugar Allulose in Yogurt Formulations",
@@ -63,8 +65,13 @@ def alternates(lang, page):
         for code, _, _ in LANGS)
 
 
+# A version tag on the stylesheet URL so browsers fetch the new CSS after each change.
+CSS_VERSION = hashlib.sha1((ROOT / "styles.css").read_bytes()).hexdigest()[:8]
+
+
 def with_chrome(src, lang, page):
-    """Insert (or refresh) the switcher and hreflang links."""
+    """Insert (or refresh) the switcher, hreflang links and stylesheet version."""
+    src = re.sub(r'href="styles\.css[^"]*"', f'href="styles.css?v={CSS_VERSION}"', src)
     src = re.sub(r'\n  <link rel="alternate" hreflang=[^\n]*', "", src)
     src = src.replace('  <link rel="stylesheet"', alternates(lang, page) + '\n  <link rel="stylesheet"', 1)
     src = re.sub(r'\s*<details class="lang-switch">.*?</details>', "", src, flags=re.S)
@@ -100,7 +107,8 @@ def translate(src, lang):
         for attr in ("content", "aria-label", "alt"):
             src = src.replace(f'{attr}="{html.escape(en)}"', f'{attr}="{html.escape(tr)}"')
     src = src.replace('<html lang="en">', f'<html lang="{HTML_LANG[lang]}">', 1)
-    for asset in ("styles.css", "bunny.svg", "apple-touch-icon.png"):
+    src = src.replace('href="styles.css', 'href="../styles.css')
+    for asset in ("bunny.svg", "apple-touch-icon.png"):
         src = src.replace(f'"{asset}"', f'"../{asset}"')
     src = src.replace('src="photos/', 'src="../photos/')
     return src

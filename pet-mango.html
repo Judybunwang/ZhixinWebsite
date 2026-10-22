@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f141b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="bunny.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <title>Mango · Zhixin Wang, PhD</title>
+  <meta name="description" content="Photos of Mango.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="pet-mango.html">
+  <link rel="alternate" hreflang="fr" href="fr/pet-mango.html">
+  <link rel="alternate" hreflang="es" href="es/pet-mango.html">
+  <link rel="alternate" hreflang="zh-Hans" href="zh/pet-mango.html">
+  <link rel="stylesheet" href="styles.css?v=7e1e4e16">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><img class="brand-bunny" src="bunny.svg" alt="" width="38" height="38">Zhixin Wang, PhD</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cooking.html">Cooking</a></li>
+        <li><a href="pets.html" aria-current="page">Pets</a></li>
+        <li><a href="home-diy.html">Home &amp; DIY</a></li>
+      </ul>
+      <details class="lang-switch">
+        <summary aria-label="Language"><span aria-hidden="true">🌐</span> EN</summary>
+        <ul>
+          <li><a href="pet-mango.html" hreflang="en" lang="en" aria-current="true">English</a></li>
+          <li><a href="fr/pet-mango.html" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="es/pet-mango.html" hreflang="es" lang="es">Español</a></li>
+          <li><a href="zh/pet-mango.html" hreflang="zh-Hans" lang="zh-Hans">中文</a></li>
+        </ul>
+      </details>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro container narrow">
+      <p class="eyebrow"><a href="pets.html">← All pets</a></p>
+      <h1>🐱 Mango</h1>
+    </section>
+
+    <section class="section container narrow">
+      <div class="gallery">
+        <img src="photos/pets/mango-1.jpg" alt="Mango" width="768" height="1024">
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="contact-band">
+        <h2>Let's connect</h2>
+        <p>I'm always happy to talk about food innovation, partnerships, and new technologies, or to trade a good sourdough tip.</p>
+        <div class="actions">
+          <a class="button primary" href="mailto:zhixin2288@gmail.com">Email me</a>
+          <a class="button" href="https://www.linkedin.com/in/wangzhixin" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p><img class="foot-bunny" src="bunny.svg" alt="" width="22" height="22"> © <span id="year"></span> Zhixin Wang · <a href="mailto:zhixin2288@gmail.com">Email</a> · <a href="https://www.linkedin.com/in/wangzhixin" target="_blank" rel="noopener">LinkedIn</a></p>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cooking.html">Cooking</a></li>
+      <li><a href="pets.html">Pets</a></li>
+      <li><a href="home-diy.html">Home &amp; DIY</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // On phones the menu scrolls sideways: bring the current page's link into view.
+    var nav = document.querySelector('.nav-links'), cur = nav && nav.querySelector('[aria-current]');
+    if (nav && cur && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  </script>
+</body>
+</html>

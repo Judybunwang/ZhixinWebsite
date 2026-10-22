@@ -200,7 +200,7 @@ a.card:hover { text-decoration: none; transform: translateY(-2px); border-color:
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
 .stat { padding: 20px; border-radius: var(--radius); background: var(--surface-2); }
 .stat strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.6rem; color: var(--accent); }
-.stat span { color: var(--muted); font-size: 15px; }
+.stat span { display: block; color: var(--muted); font-size: 15px; }
 .stat small { display: block; margin-top: 4px; font-size: 13px; line-height: 1.45; color: var(--muted); }
 
 /* Timeline */
@@ -278,6 +278,10 @@ a.ext::after { content: " ↗"; }
 }
 .photo.has-photo { aspect-ratio: 1; background: var(--surface-2); border: 0; }
 .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Pet photo galleries */
+.gallery { columns: 3 260px; column-gap: 16px; }
+.gallery img { display: block; width: 100%; height: auto; margin-bottom: 16px; border-radius: 12px; break-inside: avoid; box-shadow: var(--shadow); }
 
 .callout {
   padding: 24px;
