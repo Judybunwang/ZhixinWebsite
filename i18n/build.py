@@ -102,6 +102,7 @@ def translate(src, lang):
     src = src.replace('<html lang="en">', f'<html lang="{HTML_LANG[lang]}">', 1)
     for asset in ("styles.css", "bunny.svg", "apple-touch-icon.png"):
         src = src.replace(f'"{asset}"', f'"../{asset}"')
+    src = src.replace('src="photos/', 'src="../photos/')
     return src
 
 
