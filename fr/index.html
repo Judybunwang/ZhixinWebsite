@@ -28,6 +28,7 @@
         <li><a href="research.html">Recherche</a></li>
         <li><a href="cooking.html">Cuisine</a></li>
         <li><a href="pets.html">Animaux</a></li>
+        <li><a href="home-diy.html">Maison et bricolage</a></li>
       </ul>
       <details class="lang-switch">
         <summary aria-label="Langue"><span aria-hidden="true">🌐</span> FR</summary>
@@ -47,7 +48,7 @@
         <p class="eyebrow">Science des aliments · Biotech · Innovation</p>
         <h1>Bonjour, je suis Zhixin.</h1>
         <p class="lede">Je dirige l'innovation en technologies alimentaires pour le marché nord-américain chez Puratos. Je bâtis des partenariats en fermentation, systèmes protéiques et biotechnologie qui apportent de nouvelles idées à la boulangerie, à la pâtisserie et au chocolat.</p>
-        <p class="location">Grand Philadelphie · Ph. D., Université Cornell</p>
+        <p class="location"><svg class="pin" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Grand Philadelphie</span></p>
         <div class="actions">
           <a class="button primary" href="career.html">Voir mon parcours</a>
           <a class="button" href="https://www.linkedin.com/in/wangzhixin" target="_blank" rel="noopener">LinkedIn</a>
@@ -62,9 +63,8 @@
     <section class="section container">
       <div class="stats">
         <div class="stat"><strong>Ph. D.</strong><span>Sciences et technologies des aliments, Cornell</span></div>
-        <div class="stat"><strong>3</strong><span>Pays couverts en Amérique du Nord</span></div>
         <div class="stat"><strong>4</strong><span>Publications évaluées par des pairs</span></div>
-        <div class="stat"><strong>3</strong><span>Langues parlées couramment : anglais, français, mandarin</span></div>
+        <div class="stat"><strong>4</strong><span>Langues</span><small>Anglais, français et chinois (mandarin) courants, espagnol de niveau élémentaire</small></div>
       </div>
     </section>
 
@@ -101,6 +101,12 @@
           <p>Voici la troupe : 2 chats, 1 chiot et 8 poules.</p>
           <span class="more">Dire bonjour →</span>
         </a>
+        <a class="card" href="home-diy.html">
+          <div class="icon">🛠️</div>
+          <h3>Maison et bricolage</h3>
+          <p>Projets à la maison.</p>
+          <span class="more">Jeter un coup d'œil →</span>
+        </a>
       </div>
     </section>
 
@@ -124,9 +130,15 @@
       <li><a href="research.html">Recherche</a></li>
       <li><a href="cooking.html">Cuisine</a></li>
       <li><a href="pets.html">Animaux</a></li>
+      <li><a href="home-diy.html">Maison et bricolage</a></li>
     </ul>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // On phones the menu scrolls sideways: bring the current page's link into view.
+    var nav = document.querySelector('.nav-links'), cur = nav && nav.querySelector('[aria-current]');
+    if (nav && cur && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  </script>
 </body>
 </html>

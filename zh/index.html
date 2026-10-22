@@ -28,6 +28,7 @@
         <li><a href="research.html">科研</a></li>
         <li><a href="cooking.html">烹饪</a></li>
         <li><a href="pets.html">宠物</a></li>
+        <li><a href="home-diy.html">家居与DIY</a></li>
       </ul>
       <details class="lang-switch">
         <summary aria-label="语言"><span aria-hidden="true">🌐</span> 中文</summary>
@@ -47,7 +48,7 @@
         <p class="eyebrow">食品科学 · 生物技术 · 创新</p>
         <h1>你好，我是 Zhixin。</h1>
         <p class="lede">我在 Puratos 负责北美市场的食品科技创新，在发酵、蛋白体系和生物技术领域建立合作，把新想法带进烘焙、甜点和巧克力。</p>
-        <p class="location">大费城地区 · 康奈尔大学博士</p>
+        <p class="location"><svg class="pin" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>大费城地区</span></p>
         <div class="actions">
           <a class="button primary" href="career.html">查看我的经历</a>
           <a class="button" href="https://www.linkedin.com/in/wangzhixin" target="_blank" rel="noopener">LinkedIn</a>
@@ -62,9 +63,8 @@
     <section class="section container">
       <div class="stats">
         <div class="stat"><strong>博士</strong><span>康奈尔大学 食品科学与技术</span></div>
-        <div class="stat"><strong>3</strong><span>负责的北美国家</span></div>
         <div class="stat"><strong>4</strong><span>同行评审论文</span></div>
-        <div class="stat"><strong>3</strong><span>流利语言：英语、法语、普通话</span></div>
+        <div class="stat"><strong>4</strong><span>种语言</span><small>英语、法语、中文（普通话）流利，西班牙语初级</small></div>
       </div>
     </section>
 
@@ -101,6 +101,12 @@
           <p>认识一下我的小伙伴：2 只猫、1 只小狗和 8 只鸡。</p>
           <span class="more">打个招呼 →</span>
         </a>
+        <a class="card" href="home-diy.html">
+          <div class="icon">🛠️</div>
+          <h3>家居与DIY</h3>
+          <p>家里的各种小项目。</p>
+          <span class="more">去看看 →</span>
+        </a>
       </div>
     </section>
 
@@ -124,9 +130,15 @@
       <li><a href="research.html">科研</a></li>
       <li><a href="cooking.html">烹饪</a></li>
       <li><a href="pets.html">宠物</a></li>
+      <li><a href="home-diy.html">家居与DIY</a></li>
     </ul>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // On phones the menu scrolls sideways: bring the current page's link into view.
+    var nav = document.querySelector('.nav-links'), cur = nav && nav.querySelector('[aria-current]');
+    if (nav && cur && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  </script>
 </body>
 </html>

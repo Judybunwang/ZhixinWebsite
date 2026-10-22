@@ -28,6 +28,7 @@
         <li><a href="research.html">Investigación</a></li>
         <li><a href="cooking.html">Cocina</a></li>
         <li><a href="pets.html">Mascotas</a></li>
+        <li><a href="home-diy.html">Hogar y bricolaje</a></li>
       </ul>
       <details class="lang-switch">
         <summary aria-label="Idioma"><span aria-hidden="true">🌐</span> ES</summary>
@@ -170,8 +171,7 @@
         <li>Inglés · Competencia profesional completa</li>
         <li>Francés · Nativo</li>
         <li>Chino mandarín · Nativo</li>
-        <li>Español · Competencia profesional limitada</li>
-        <li>Japonés · Básico</li>
+        <li>Español · Básico</li>
       </ul>
     </section>
 
@@ -195,9 +195,15 @@
       <li><a href="research.html">Investigación</a></li>
       <li><a href="cooking.html">Cocina</a></li>
       <li><a href="pets.html">Mascotas</a></li>
+      <li><a href="home-diy.html">Hogar y bricolaje</a></li>
     </ul>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // On phones the menu scrolls sideways: bring the current page's link into view.
+    var nav = document.querySelector('.nav-links'), cur = nav && nav.querySelector('[aria-current]');
+    if (nav && cur && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  </script>
 </body>
 </html>

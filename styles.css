@@ -142,7 +142,8 @@ h3 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
   padding-bottom: 56px;
 }
 .hero .lede { color: var(--text); }
-.hero .location { margin: 10px 0 0; color: var(--muted); }
+.hero .location { margin: 10px 0 0; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.pin { color: var(--accent); flex: none; }
 
 .portrait {
   aspect-ratio: 1;
@@ -200,6 +201,7 @@ a.card:hover { text-decoration: none; transform: translateY(-2px); border-color:
 .stat { padding: 20px; border-radius: var(--radius); background: var(--surface-2); }
 .stat strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.6rem; color: var(--accent); }
 .stat span { color: var(--muted); font-size: 15px; }
+.stat small { display: block; margin-top: 4px; font-size: 13px; line-height: 1.45; color: var(--muted); }
 
 /* Timeline */
 .timeline { list-style: none; margin: 0; padding: 0; }

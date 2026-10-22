@@ -28,6 +28,7 @@
         <li><a href="research.html">Recherche</a></li>
         <li><a href="cooking.html" aria-current="page">Cuisine</a></li>
         <li><a href="pets.html">Animaux</a></li>
+        <li><a href="home-diy.html">Maison et bricolage</a></li>
       </ul>
       <details class="lang-switch">
         <summary aria-label="Langue"><span aria-hidden="true">🌐</span> FR</summary>
@@ -96,9 +97,15 @@
       <li><a href="research.html">Recherche</a></li>
       <li><a href="cooking.html">Cuisine</a></li>
       <li><a href="pets.html">Animaux</a></li>
+      <li><a href="home-diy.html">Maison et bricolage</a></li>
     </ul>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // On phones the menu scrolls sideways: bring the current page's link into view.
+    var nav = document.querySelector('.nav-links'), cur = nav && nav.querySelector('[aria-current]');
+    if (nav && cur && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  </script>
 </body>
 </html>

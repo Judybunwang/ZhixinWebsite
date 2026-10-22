@@ -19,7 +19,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from translations import T  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PAGES = ["index.html", "career.html", "research.html", "cooking.html", "pets.html"]
+PAGES = ["index.html", "career.html", "research.html", "cooking.html", "pets.html", "home-diy.html"]
 LANGS = [("en", "English", "EN"), ("fr", "Français", "FR"), ("es", "Español", "ES"), ("zh", "中文", "中文")]
 COL = {"fr": 0, "es": 1, "zh": 2}
 HTML_LANG = {"en": "en", "fr": "fr", "es": "es", "zh": "zh-Hans"}

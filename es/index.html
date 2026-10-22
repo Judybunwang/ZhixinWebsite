@@ -28,6 +28,7 @@
         <li><a href="research.html">Investigación</a></li>
         <li><a href="cooking.html">Cocina</a></li>
         <li><a href="pets.html">Mascotas</a></li>
+        <li><a href="home-diy.html">Hogar y bricolaje</a></li>
       </ul>
       <details class="lang-switch">
         <summary aria-label="Idioma"><span aria-hidden="true">🌐</span> ES</summary>
@@ -47,7 +48,7 @@
         <p class="eyebrow">Ciencia de alimentos · Biotecnología · Innovación</p>
         <h1>Hola, soy Zhixin.</h1>
         <p class="lede">Lidero la innovación en tecnología alimentaria para el mercado norteamericano en Puratos, creando alianzas en fermentación, sistemas proteicos y biotecnología que llevan nuevas ideas a la panadería, la pastelería y el chocolate.</p>
-        <p class="location">Área de Filadelfia · PhD, Universidad de Cornell</p>
+        <p class="location"><svg class="pin" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Área de Filadelfia</span></p>
         <div class="actions">
           <a class="button primary" href="career.html">Ver mi trayectoria</a>
           <a class="button" href="https://www.linkedin.com/in/wangzhixin" target="_blank" rel="noopener">LinkedIn</a>
@@ -62,9 +63,8 @@
     <section class="section container">
       <div class="stats">
         <div class="stat"><strong>PhD</strong><span>Ciencia y Tecnología de Alimentos, Cornell</span></div>
-        <div class="stat"><strong>3</strong><span>Países a mi cargo en Norteamérica</span></div>
         <div class="stat"><strong>4</strong><span>Publicaciones revisadas por pares</span></div>
-        <div class="stat"><strong>3</strong><span>Idiomas con fluidez: inglés, francés, mandarín</span></div>
+        <div class="stat"><strong>4</strong><span>Idiomas</span><small>Dominio completo de inglés, francés y chino (mandarín); español básico</small></div>
       </div>
     </section>
 
@@ -101,6 +101,12 @@
           <p>Conoce a la pandilla: 2 gatos, 1 cachorro y 8 gallinas.</p>
           <span class="more">Saluda →</span>
         </a>
+        <a class="card" href="home-diy.html">
+          <div class="icon">🛠️</div>
+          <h3>Hogar y bricolaje</h3>
+          <p>Proyectos en casa.</p>
+          <span class="more">Echa un vistazo →</span>
+        </a>
       </div>
     </section>
 
@@ -124,9 +130,15 @@
       <li><a href="research.html">Investigación</a></li>
       <li><a href="cooking.html">Cocina</a></li>
       <li><a href="pets.html">Mascotas</a></li>
+      <li><a href="home-diy.html">Hogar y bricolaje</a></li>
     </ul>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // On phones the menu scrolls sideways: bring the current page's link into view.
+    var nav = document.querySelector('.nav-links'), cur = nav && nav.querySelector('[aria-current]');
+    if (nav && cur && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  </script>
 </body>
 </html>
