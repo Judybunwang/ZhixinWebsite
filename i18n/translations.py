@@ -206,7 +206,7 @@ T = {
     "The sourdough starter": ("Le levain", "La masa madre", "酸面种"),
     "Officially part of the household and basically family. [Add its name, its age, and how you feed it.]": ("Officiellement membre de la maison, et presque de la famille. [Ajoutez son nom, son âge et comment vous le nourrissez.]", "Oficialmente parte de la casa y casi de la familia. [Añade su nombre, su edad y cómo la alimentas.]", "正式成为家庭一员，基本上就是家人。[添加它的名字、年龄和喂养方式。]"),
     "Photo of a favorite bake": ("Photo d'une recette préférée", "Foto de tu horneado favorito", "最爱烘焙作品照片"),
-    "Favorite bake": ("Ma recette préférée", "Mi horneado favorito", "最爱的烘焙"),
+    "Favorite bake": ("Ma pâtisserie préférée", "Mi horneado favorito", "最爱的烘焙"),
     "[A bread, pastry, or chocolate creation you're proud of, and what makes it work.]": ("[Un pain, une pâtisserie ou une création chocolatée dont vous êtes fière, et le secret de sa réussite.]", "[Un pan, pastel o creación de chocolate del que estés orgullosa, y su secreto.]", "[一款你引以为傲的面包、甜点或巧克力作品，以及它成功的秘诀。]"),
     "Photo of a family dish": ("Photo d'un plat de famille", "Foto de un plato familiar", "家常菜照片"),
     "A taste of home": ("Un goût de chez moi", "Sabor de casa", "家的味道"),
@@ -219,6 +219,11 @@ T = {
         ("[Une courte note sur ce que la science des aliments vous a appris en cuisine, par exemple comment le temps de fermentation change le goût du levain, ou pourquoi le sucre protège les protéines de la chaleur.]",
          "[Una nota breve sobre lo que la ciencia de alimentos te ha enseñado en la cocina, por ejemplo cómo el tiempo de fermentación cambia el sabor de la masa madre, o por qué el azúcar protege a las proteínas del calor.]",
          "[简短写写食品科学教会你的烹饪心得，比如发酵时间如何改变酸面包的风味，或者为什么糖能保护蛋白质不受热变性。]"),
+
+    "In progress": ("En cours", "En preparación", "建设中"),
+    "Favorite recipe": ("Ma recette préférée", "Mi receta favorita", "最爱的菜谱"),
+    "🐱 Cat": ("🐱 Chat", "🐱 Gato", "🐱 猫咪"),
+    "🐶 Puppy": ("🐶 Chiot", "🐶 Cachorro", "🐶 小狗"),
 
     # ---- Pets ----
     "Pets · Zhixin Wang, PhD": ("Animaux · Zhixin Wang, Ph. D.", "Mascotas · Zhixin Wang, PhD", "宠物 · Zhixin Wang 博士"),
