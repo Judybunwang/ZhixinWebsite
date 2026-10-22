@@ -28,6 +28,7 @@
         <li><a href="research.html" aria-current="page">Recherche</a></li>
         <li><a href="cooking.html">Cuisine</a></li>
         <li><a href="pets.html">Animaux</a></li>
+        <li><a href="home-diy.html">Maison et bricolage</a></li>
       </ul>
       <details class="lang-switch">
         <summary aria-label="Langue"><span aria-hidden="true">🌐</span> FR</summary>
@@ -60,10 +61,10 @@
     <section class="section container narrow">
       <h2>Publications</h2>
       <ul class="pubs">
-        <li>Cellulose-Binding Module-Mediated Immobilization of L-Arabinose Isomerase for Reusable D-Tagatose Production</li>
-        <li>Consumers Respond Positively to the Sensory, Health, and Sustainability Benefits of the Rare Sugar Allulose in Yogurt Formulations</li>
-        <li>Recombinant lactase with a cellulose binding domain permits facile immobilization onto cellulose with retained activity</li>
-        <li>Concentrated sugar solutions protect lactase from thermal inactivation</li>
+        <li><a href="https://pubs.acs.org/bichaw/article-abstract/65/19/3057/5427836/Cellulose-Binding-Module-Mediated-Immobilization" target="_blank" rel="noopener">Cellulose-Binding Module-Mediated Immobilization of L-Arabinose Isomerase for Reusable D-Tagatose Production</a></li>
+        <li><a href="https://www.mdpi.com/2304-8158/11/22/3718" target="_blank" rel="noopener">Consumers Respond Positively to the Sensory, Health, and Sustainability Benefits of the Rare Sugar Allulose in Yogurt Formulations</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0960308521000122" target="_blank" rel="noopener">Recombinant lactase with a cellulose binding domain permits facile immobilization onto cellulose with retained activity</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0958694621001965" target="_blank" rel="noopener">Concentrated sugar solutions protect lactase from thermal inactivation</a></li>
       </ul>
     </section>
 
@@ -112,9 +113,15 @@
       <li><a href="research.html">Recherche</a></li>
       <li><a href="cooking.html">Cuisine</a></li>
       <li><a href="pets.html">Animaux</a></li>
+      <li><a href="home-diy.html">Maison et bricolage</a></li>
     </ul>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // On phones the menu scrolls sideways: bring the current page's link into view.
+    var nav = document.querySelector('.nav-links'), cur = nav && nav.querySelector('[aria-current]');
+    if (nav && cur && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  </script>
 </body>
 </html>

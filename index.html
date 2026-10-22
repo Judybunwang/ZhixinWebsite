@@ -28,6 +28,7 @@
         <li><a href="research.html">Research</a></li>
         <li><a href="cooking.html">Cooking</a></li>
         <li><a href="pets.html">Pets</a></li>
+        <li><a href="home-diy.html">Home &amp; DIY</a></li>
       </ul>
       <details class="lang-switch">
         <summary aria-label="Language"><span aria-hidden="true">🌐</span> EN</summary>
@@ -47,7 +48,7 @@
         <p class="eyebrow">Food Scientist · Biotech · Innovation</p>
         <h1>Hi, I'm Zhixin.</h1>
         <p class="lede">I lead food tech innovation for the North American market at Puratos, building partnerships in fermentation, protein systems, and biotech that bring new ideas into bakery, patisserie, and chocolate.</p>
-        <p class="location">Greater Philadelphia · Ph.D., Cornell University</p>
+        <p class="location"><svg class="pin" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>Greater Philadelphia</span></p>
         <div class="actions">
           <a class="button primary" href="career.html">See my career</a>
           <a class="button" href="https://www.linkedin.com/in/wangzhixin" target="_blank" rel="noopener">LinkedIn</a>
@@ -62,9 +63,8 @@
     <section class="section container">
       <div class="stats">
         <div class="stat"><strong>Ph.D.</strong><span>Food Science &amp; Technology, Cornell</span></div>
-        <div class="stat"><strong>3</strong><span>Countries in my North American remit</span></div>
         <div class="stat"><strong>4</strong><span>Peer-reviewed publications</span></div>
-        <div class="stat"><strong>3</strong><span>Fluent languages: English, French, Mandarin</span></div>
+        <div class="stat"><strong>4</strong><span>Languages</span><small>Full fluency in English, French, Chinese (Mandarin), elementary proficiency in Spanish</small></div>
       </div>
     </section>
 
@@ -101,6 +101,12 @@
           <p>Meet the crew: 2 cats, 1 puppy, and 8 chickens.</p>
           <span class="more">Say hello →</span>
         </a>
+        <a class="card" href="home-diy.html">
+          <div class="icon">🛠️</div>
+          <h3>Home &amp; DIY</h3>
+          <p>Projects around the house.</p>
+          <span class="more">Take a look →</span>
+        </a>
       </div>
     </section>
 
@@ -124,9 +130,15 @@
       <li><a href="research.html">Research</a></li>
       <li><a href="cooking.html">Cooking</a></li>
       <li><a href="pets.html">Pets</a></li>
+      <li><a href="home-diy.html">Home &amp; DIY</a></li>
     </ul>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // On phones the menu scrolls sideways: bring the current page's link into view.
+    var nav = document.querySelector('.nav-links'), cur = nav && nav.querySelector('[aria-current]');
+    if (nav && cur && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.offsetWidth) / 2;
+  </script>
 </body>
 </html>

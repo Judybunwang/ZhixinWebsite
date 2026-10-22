@@ -241,4 +241,16 @@ T = {
     "🐔 The flock": ("🐔 Les poules", "🐔 Las gallinas", "🐔 鸡群"),
     "Eight backyard chickens and the source of a lot of very fresh eggs. [Names or breeds.]": ("Huit poules dans la cour et beaucoup d'œufs très frais. [Noms ou races.]", "Ocho gallinas en el patio y muchísimos huevos frescos. [Nombres o razas.]", "后院的八只鸡，提供源源不断的新鲜鸡蛋。[名字或品种。]"),
     "In loving memory of Judy, my beloved rabbit ❤️": ("À la douce mémoire de Judy, ma lapine adorée ❤️", "En cariñoso recuerdo de Judy, mi querida coneja ❤️", "深切怀念 Judy，我心爱的小兔子 ❤️"),
+
+    # ---- Home & DIY ----
+    "Home & DIY": ("Maison et bricolage", "Hogar y bricolaje", "家居与DIY"),
+    "Home & DIY · Zhixin Wang, PhD": ("Maison et bricolage · Zhixin Wang, Ph. D.", "Hogar y bricolaje · Zhixin Wang, PhD", "家居与DIY · Zhixin Wang 博士"),
+    "Home and DIY projects by Zhixin Wang.": ("Projets de maison et de bricolage de Zhixin Wang.", "Proyectos de hogar y bricolaje de Zhixin Wang.", "Zhixin Wang 的家居与DIY项目。"),
+    "Around the house": ("À la maison", "En casa", "家中点滴"),
+    "Projects around the house.": ("Projets à la maison.", "Proyectos en casa.", "家里的各种小项目。"),
+    "Take a look →": ("Jeter un coup d'œil →", "Echa un vistazo →", "去看看 →"),
+    "Greater Philadelphia": ("Grand Philadelphie", "Área de Filadelfia", "大费城地区"),
+    "Languages": ("Langues", "Idiomas", "种语言"),
+    "Full fluency in English, French, Chinese (Mandarin), elementary proficiency in Spanish": ("Anglais, français et chinois (mandarin) courants, espagnol de niveau élémentaire", "Dominio completo de inglés, francés y chino (mandarín); español básico", "英语、法语、中文（普通话）流利，西班牙语初级"),
+    "Spanish · Elementary": ("Espagnol · Notions de base", "Español · Básico", "西班牙语 · 初级"),
 }
