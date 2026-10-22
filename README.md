@@ -28,3 +28,5 @@ Put images in a `photos/` folder and swap a placeholder such as `<div class="pho
 ## Publishing
 
 In the repository's **Settings → Pages**, set **Source** to "Deploy from a branch", branch `main`, folder `/ (root)`.
+
+The site uses the custom domain **itszhixinwang.com** (see `CNAME`). Its DNS is managed in Cloudflare and must point at GitHub Pages with "DNS only" records.
