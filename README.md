@@ -25,6 +25,8 @@ The English pages in the root are the source. French, Spanish and Chinese copies
 
 Put images in a `photos/` folder and swap a placeholder such as `<div class="photo">…</div>` for `<div class="photo"><img src="photos/cat.jpg" alt="…"></div>`. The home page portrait works the same way with `<div class="portrait">`.
 
+Each pet has its own photo page (`pet-tofu.html`, `pet-mango.html`, `pet-moona.html`, `pet-flock.html`). To add a photo, put it in `photos/pets/` and add another `<img>` line inside `<div class="gallery">`, then run `python3 i18n/build.py`.
+
 ## Publishing
 
 In the repository's **Settings → Pages**, set **Source** to "Deploy from a branch", branch `main`, folder `/ (root)`.
