@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Bunny">
+  <g stroke="#5b3a46" stroke-width="3" stroke-linejoin="round">
+    <!-- ears -->
+    <path d="M42 50 C30 22 32 6 41 6 C51 6 54 26 52 48 Z" fill="#fff"/>
+    <path d="M70 48 C70 26 74 6 84 7 C93 9 90 26 78 50 Z" fill="#fff"/>
+    <!-- body -->
+    <ellipse cx="62" cy="96" rx="34" ry="20" fill="#fff"/>
+    <!-- head -->
+    <ellipse cx="60" cy="66" rx="30" ry="25" fill="#fff"/>
+    <!-- tail -->
+    <circle cx="96" cy="98" r="7" fill="#fff"/>
+  </g>
+  <!-- inner ears -->
+  <path d="M43 44 C36 24 37 13 41 13 C46 13 48 28 47 44 Z" fill="#f7b6c8"/>
+  <path d="M75 44 C76 28 78 14 83 14 C87 15 84 28 77 45 Z" fill="#f7b6c8"/>
+  <!-- face -->
+  <circle cx="49" cy="64" r="3.6" fill="#3b2730"/>
+  <circle cx="71" cy="64" r="3.6" fill="#3b2730"/>
+  <circle cx="50.2" cy="62.8" r="1.1" fill="#fff"/>
+  <circle cx="72.2" cy="62.8" r="1.1" fill="#fff"/>
+  <ellipse cx="42" cy="73" rx="5.5" ry="3.2" fill="#f7b6c8" opacity="0.85"/>
+  <ellipse cx="78" cy="73" rx="5.5" ry="3.2" fill="#f7b6c8" opacity="0.85"/>
+  <path d="M57 70 L63 70 L60 73.5 Z" fill="#e8799c"/>
+  <path d="M60 73.5 C60 77 56 78 54.5 76 M60 73.5 C60 77 64 78 65.5 76" fill="none" stroke="#5b3a46" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- paws -->
+  <ellipse cx="50" cy="112" rx="8" ry="4.5" fill="#fff" stroke="#5b3a46" stroke-width="2.5"/>
+  <ellipse cx="72" cy="112" rx="8" ry="4.5" fill="#fff" stroke="#5b3a46" stroke-width="2.5"/>
+</svg>
